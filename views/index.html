@@ -4,4 +4,10 @@
 
 <h1>Forums</h1>
 
+<ul>
+  {% for forum in forums %}
+  <a href="forum/{{forum.topic}}"><li>{{ forum.topic }}</li></a>
+  {% endfor %}
+</ul>
+
 {% endblock %}
