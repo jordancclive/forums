@@ -2,8 +2,8 @@ const express = require('express');
 const router = express.Router();
 const db = require('../models');
 
-router.use('/', require('./forums'));
-router.use('/forum', require('./forum'));
-router.use('/profile', require('./profile'));
+router.get('/', (req, res, next)=>{
+  res.render('profile', { page: 'Profile' });
+})
 
 module.exports = router;
