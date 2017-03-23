@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <link rel='stylesheet' href='/vendor/bootstrap/dist/css/bootstrap.css' />
+  </head>
+  <body>
+    <div class='container'>
+      <ul class='nav nav-tabs'>
+        <li {% if page === 'forums' %}class='active'{% endif %}>
+          <a href='/'>Forums</a>
+        </li>
+        <li {% if page === 'users' %}class='active'{% endif %}>
+          <a href='/users'>Forums</a>
+        </li>
+      </ul>
+      {% block content %}
+      {% endblock %}
+    </div>
+  </body>
+</html>
