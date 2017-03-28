@@ -1,7 +1,7 @@
 const db = require('./_db');
 
-const Users = db.define('users', {
+const User = db.define('user', {
   name: db.Sequelize.STRING
 })
 
-module.exports = Users;
+module.exports = User;

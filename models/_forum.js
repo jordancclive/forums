@@ -1,7 +1,7 @@
 const db = require('./_db');
 
-const Forums = db.define('forums', {
+const Forum = db.define('forum', {
   topic: db.Sequelize.STRING
 })
 
-module.exports = Forums;
+module.exports = Forum;
