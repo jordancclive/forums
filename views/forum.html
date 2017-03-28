@@ -4,15 +4,14 @@
 
 <h1>{{ forum.topic }}</h1>
 
-<form class="" action="index.html" method="post">
-  <button type="button" name="button">Join</button>
+<form class="" action="{{ forum.topic }}" method="post">
+  <input type="text" name="username" value="Jordan" />
+  <button type="submit" name="join">Join</button>
 </form>
 
 <ul>
-{% for user in users %}
-  {% if user.hasForum(forum) %}
+{% for user in forum.users %}
   <li>{{ user.name }}</li>
-  {% endif %}
 {% endfor %}
 </ul>
 

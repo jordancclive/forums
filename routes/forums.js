@@ -4,7 +4,7 @@ const db = require('../models');
 
 router.get('/', (req,res,next)=>{
   db.models.Forum.findAll({order:'topic'})
-    .then(result => res.render('index', {forum:result}))
+    .then(result => res.render('index', {forums:result}))
     .catch(next);
 });
 
