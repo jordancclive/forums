@@ -17,14 +17,14 @@ const seed = ()=>{
   let entrepreneurship;
   let montessori;
   let legos;
-  let breast_feeding;
+  let sleeping;
   return db.sync({force:true})
     .then(()=>{
       return Forum.bulkCreate([
         {topic: "Entrepreneurship"},
         {topic: "Montessori"},
         {topic: "Legos"},
-        {topic: "Breast Feeding"}
+        {topic: "Sleeping"}
       ])
     })
     .then(()=>{
@@ -47,10 +47,10 @@ const seed = ()=>{
     .then((_legos)=>{legos = _legos})
     .then(()=>{
       return Forum.findOne({
-        where: {topic: "Breast Feeding"}
+        where: {topic: "Sleeping"}
       })
     })
-    .then((_breast_feeding)=>{breast_feeding = _breast_feeding})
+    .then((_sleeping)=>{sleeping = _sleeping})
     .then(()=>{
       return User.bulkCreate([
         {name: "Jordan"},
@@ -86,7 +86,7 @@ const seed = ()=>{
     .then(()=>{ entrepreneurship.addUser(jordan) })
     .then(()=>{ montessori.addUser(fan) })
     .then(()=>{ legos.addUser(lincoln) })
-    .then(()=>{ breast_feeding.addUser(serene) })
+    .then(()=>{ sleeping.addUser(serene) })
 }
 
 module.exports = {

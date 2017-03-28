@@ -11,7 +11,7 @@
 
 <ul>
 {% for user in forum.users %}
-  <li>{{ user.name }}</li>
+  <a href="/user/{{ user.name }}"><li>{{ user.name }}</li></a>
 {% endfor %}
 </ul>
 
